@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context=".PlaymusicActivity">
+
+
+    <ImageView
+
+        android:id="@+id/ivSing"
+
+        android:layout_width="90dp"
+
+        android:layout_height="90dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/music_video_24" />
+
+
+    <TextView
+
+        android:id="@+id/tvTitle"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="31dp"
+
+        android:text="타이틀"
+
+        android:textColor="@color/black"
+
+        android:textSize="14sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/tvArtist"
+
+        app:layout_constraintEnd_toEndOf="@+id/ivSing"
+
+        app:layout_constraintStart_toStartOf="@+id/ivSing" />
+
+
+    <TextView
+
+        android:id="@+id/tvArtist"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="90dp"
+
+        android:text="아티스트"
+
+        android:textColor="@color/black"
+
+        android:textSize="14sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+
+        app:layout_constraintStart_toStartOf="@+id/tvTitle" />
+
+
+    <TextView
+
+        android:id="@+id/tvDurationStart"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="323dp"
+
+        android:text="00:00"
+
+        android:textColor="@color/black"
+
+        android:textSize="14sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+
+        android:id="@+id/tvDurationStop"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="9dp"
+
+        android:layout_marginBottom="21dp"
+
+        android:text="00:00"
+
+        android:textColor="@color/black"
+
+        android:textSize="14sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <SeekBar
+
+        android:id="@+id/seekBar"
+
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="21dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvDurationStart" />
+
+
+    <ImageView
+
+        android:id="@+id/ivStart"
+
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+
+        android:onClick="onClickView"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ivStop"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/ivStop"
+
+        app:srcCompat="@drawable/play_circle_filled_24" />
+
+
+    <ImageView
+
+        android:id="@+id/ivStop"
+
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+
+        android:layout_marginBottom="10dp"
+
+        android:onClick="onClickView"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/ivStart"
+
+        app:srcCompat="@drawable/pause_circle_outline_24" />
+
+
+    <ImageView
+
+        android:id="@+id/ivMain"
+
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+
+        android:onClick="onClickView"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ivStart"
+
+        app:layout_constraintEnd_toStartOf="@+id/ivStart"
+
+        app:layout_constraintHorizontal_bias="0.503"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/ivStart"
+
+        app:layout_constraintVertical_bias="0.0"
+
+        app:srcCompat="@drawable/list_checklist_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
